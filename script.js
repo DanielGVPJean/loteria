@@ -8,7 +8,7 @@ const MARGIN = cmToPixels(0.25);
 
 // Configuración de la cuadrícula
 const GRID_ROWS = 4;
-const GRID_COLS = 3;
+const GRID_COLS = 4;
 
 // Elementos del DOM
 const canvas = document.getElementById('cardCanvas');
@@ -26,11 +26,11 @@ async function getRandomImages(count) {
     const usedIndices = new Set();
 
     while (images.length < count) {
-        const index = Math.floor(Math.random() * 30) + 1; // Asumimos que hay 30 imágenes
+        const index = Math.floor(Math.random() * 50) + 1; // Asumimos que hay 30 imágenes
         if (!usedIndices.has(index)) {
             usedIndices.add(index);
             const img = new Image();
-            img.src = `images/1.png`;
+            img.src = `images/${index}.png`;
             await new Promise((resolve) => {
                 img.onload = resolve;
             });
