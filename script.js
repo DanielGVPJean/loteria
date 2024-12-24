@@ -43,7 +43,9 @@ async function getRandomImages(count) {
 
 // Función para dibujar la cuadrícula de imágenes
 function drawImageGrid(images) {
-    ctx.clearRect(0, 0, CARD_WIDTH, CARD_HEIGHT);
+    // Rellenar el fondo del canvas con blanco
+    ctx.fillStyle = 'white';
+    ctx.fillRect(0, 0, CARD_WIDTH, CARD_HEIGHT);
 
     const cellWidth = (CARD_WIDTH - MARGIN * (GRID_COLS + 1)) / GRID_COLS;
     const cellHeight = (CARD_HEIGHT - MARGIN * (GRID_ROWS + 1)) / GRID_ROWS;
