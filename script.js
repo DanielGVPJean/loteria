@@ -30,7 +30,7 @@ async function getRandomImages(count) {
         if (!usedIndices.has(index)) {
             usedIndices.add(index);
             const img = new Image();
-            img.src = `images/${index}.png`;
+            img.src = `images/1.png`;
             await new Promise((resolve) => {
                 img.onload = resolve;
             });
