@@ -26,7 +26,7 @@ async function getRandomImages(count) {
     const usedIndices = new Set();
 
     while (images.length < count) {
-        const index = Math.floor(Math.random() * 50) + 1; // Asumimos que hay 30 imágenes
+        const index = Math.floor(Math.random() * 25) + 1; // Asumimos que hay 30 imágenes
         if (!usedIndices.has(index)) {
             usedIndices.add(index);
             const img = new Image();
